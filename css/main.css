@@ -65,6 +65,11 @@
 	transition: .5s ease-in-out;
 }
 
+#matrix-canvas {
+	background: #151515;
+	border-radius: 5px;
+}
+
 .contact-info {
 	display: flex;
 	align-items: center;

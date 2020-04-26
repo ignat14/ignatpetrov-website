@@ -25,3 +25,65 @@ const enter = function() {
 	transformText(about_text, about_text.innerHTML, 18);
 
 }
+
+
+const canvas = document.getElementById("matrix-canvas");
+const ctx = canvas.getContext("2d");
+
+// ctx.fillStyle = 'red';
+// ctx.fillRect(20, 20, 150, 100);
+// ctx.fillStyle = 'blue';
+// ctx.fillRect(200, 20, 150, 100);
+
+// ctx.lineWidth = 5;
+// ctx.strokeRect(200, 200, 20, 20);
+
+// ctx.clearRect(25, 25, 140, 90);
+
+// ctx.fillText('Ignat Petrov', 400, 50);
+
+// ctx.beginPath();
+// ctx.moveTo(50, 50);
+// ctx.lineTo(150, 50);
+// ctx.lineTo(100, 200);
+// ctx.closePath();
+// ctx.fillStyle = "orange";
+// ctx.fill();
+
+const circle = {
+	x: 200,
+	y: 200,
+	size: 30,
+	dx: 5,
+	dy: 4
+}
+
+function drawCircle() {
+	ctx.beginPath();
+	ctx.arc(circle.x, circle.y, circle.size, 0, Math.PI * 2);
+	ctx.fillStyle = 'purple';
+	ctx.fill();
+}
+
+function update() {
+	ctx.clearRect(0,0, canvas.width, canvas.height)
+
+	drawCircle();
+
+	circle.x += circle.dx;
+	circle.y += circle.dy;
+
+	if (circle.x + circle.size > canvas.width || circle.x - circle.size < 0) {
+		circle.dx *= -1; 
+	}
+
+	if (circle.y + circle.size > canvas.height || circle.y - circle.size < 0) {
+		circle.dy *= -1; 
+	}
+
+	requestAnimationFrame(update);
+	console.log(123);
+	
+}
+
+update();
