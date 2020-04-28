@@ -6,6 +6,7 @@
 	<title>Ignat Petrov</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="preload" as="font">
 	<link rel="stylesheet" href="css/landing_page.css">
+	<link rel="stylesheet" href="css/sidebar.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -20,11 +21,11 @@
 			</div>
 		</div>
 		<div class="transition-div"></div>
-		<div>
+		<!-- <div>
 			<h1 style="color: #fff;">Blank Canvas</h1>
 			<canvas id="matrix-canvas" width="1024" height="1000">
 			</canvas>
-		</div>
+		</div> -->
 	</main>
 
 	<div class="second-page">
@@ -40,6 +41,11 @@
 						building erp systems and at the moment working as a Full Stack Web Developer for over a year. Always accepting new challenges with
 						excitement and have a big passion for learning new things
 					</p>
+					<!-- <canvas id="about-canvas" width="1000" height="1000">
+Software Developer with more than 5 years of experience in different areas, starting as a developer in a visual effects studio, switching to
+building erp systems and at the moment working as a Full Stack Web Developer for over a year. Always accepting new challenges with
+excitement and have a big passion for learning new things
+					</canvas> -->
 				</div>
 				<div class="contact-info">
 					<a href="https://www.linkedin.com/in/ignat-petrov-98285872/" target="_blank">
@@ -56,6 +62,11 @@
 		</div>
 		<div id="work-experience">
 			<h1>Work Experience</h1>
+			<div class="timeline">
+				<div class="timeline-container">
+					AAA
+				</div>
+			</div>
 		</div>
 	
 		<div id="education">
@@ -66,34 +77,24 @@
 			<h1>Skills</h1>
 		</div>
 	
-		<div id="side-bar">
-			<ul>
-				<li>
-					<a href="#profile">
-						<img src="icons/user-solid.svg" alt="education" width="40px" height="40px" >
-						<b>Profile</b>
-					</a>
-				</li>
-				<li>
-					<a href="#work-experience">
-						<img src="icons/briefcase-solid.svg" alt="education" width="40px" height="40px" >
-						<b>Work Experience</b>
-					</button>
-				</li>
-				<li>
-					<a href="#education">
-						<img src="icons/university-solid.svg" alt="education" width="40px" height="40px" >
-						<b>Education</b>
-					</a>
-				</li>
-				<li>
-					<a href="#skills">
-						<img src="icons/code-solid.svg" alt="education" width="40px" height="40px" >
-						<b>Skills</b>
-					</a>
-				</li>
+
+		<div class="nav-right">
+			<div class="button" id="btn">
+				<div class="bar top"></div>
+				<div class="bar middle"></div>
+				<div class="bar bottom"></div>
+			</div>
+		</div>
+
+		<div class="sidebar">
+			<ul class="sidebar-list">
+				<li class="sidebar-item"><a href="#profile" class="sidebar-anchor">Profile</a></li>
+				<li class="sidebar-item"><a href="#work-experience" class="sidebar-anchor">Work Experience</a></li>
+				<li class="sidebar-item"><a href="#education" class="sidebar-anchor">Education</a></li>
+				<li class="sidebar-item"><a href="#skills" class="sidebar-anchor">Skills</a></li>
 			</ul>
 		</div>
+
 	</div>
 	
 

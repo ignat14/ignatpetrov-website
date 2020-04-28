@@ -49,6 +49,16 @@
 	text-align: justify;
 	margin: 10px 0;
 	overflow: hidden;
+	position: relative;
+}
+
+#about-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 99%;
+	/* height: 99%; */
+	border: black solid 1px;
 }
 
 .about-text {
@@ -82,46 +92,4 @@
 
 #work-experience {
 	height: 100vh;
-}
-
-#side-bar {
-	position: fixed;
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	border-left: #000 solid 1px;
-}
-
-#side-bar ul {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	list-style-type: none;
-	margin: 100px 0;
-	padding: 0 40px;
-}
-
-#side-bar li {
-	padding: 20px 0;
-}
-
-#side-bar a {
-	border: none;
-	background: none;
-	outline: none;
-	text-decoration: none;
-	color: #000;
-	border-bottom: #fff solid 2px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#side-bar a:hover {
-	cursor: pointer;
-	border-bottom: #000 solid 2px;
-}
-
-#side-bar img {
-	padding: 4px;
 }

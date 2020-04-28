@@ -3,11 +3,10 @@ const landing_page_bg = document.getElementById("landing-page-bg");
 const header_title = document.querySelector(".header-title");
 const transition_div = document.querySelector(".transition-div");
 const second_page = document.querySelector(".second-page");
+const about_text_container = document.querySelector(".about-text-container")
 const about_text = document.querySelector(".about-text");
 
 second_page.style.display = "none";
-// landing_page.style.display = "none";
-// landing_page_bg.style.display = "none";
 
 const enter = function() {
 	// landing_page_bg.classList.add("open-site");
@@ -26,64 +25,89 @@ const enter = function() {
 
 }
 
+// enter();
 
-const canvas = document.getElementById("matrix-canvas");
-const ctx = canvas.getContext("2d");
 
-// ctx.fillStyle = 'red';
-// ctx.fillRect(20, 20, 150, 100);
-// ctx.fillStyle = 'blue';
-// ctx.fillRect(200, 20, 150, 100);
 
-// ctx.lineWidth = 5;
-// ctx.strokeRect(200, 200, 20, 20);
+const button = document.querySelector(".button");
+const sidebar = document.querySelector(".sidebar");
+const sidebar_items = document.querySelectorAll(".sidebar-item");
+console.log(sidebar_items);
 
-// ctx.clearRect(25, 25, 140, 90);
 
-// ctx.fillText('Ignat Petrov', 400, 50);
+button.addEventListener("click", function() {
+	button.classList.toggle("active");
+	sidebar.classList.toggle("move-to-left");
+	sidebar_items.forEach(function(node) {
+		console.log(node);
+		
+		node.classList.toggle("active");
+	});
+})
 
-// ctx.beginPath();
-// ctx.moveTo(50, 50);
-// ctx.lineTo(150, 50);
-// ctx.lineTo(100, 200);
-// ctx.closePath();
-// ctx.fillStyle = "orange";
-// ctx.fill();
+// const canvas = document.getElementById("about-canvas");
+// const ctx = canvas.getContext("2d");
 
-const circle = {
-	x: 200,
-	y: 200,
-	size: 30,
-	dx: 5,
-	dy: 4
-}
+// canvas_text = canvas.innerHTML;
+// canvas_width = about_text_container.offsetWidth;
 
-function drawCircle() {
-	ctx.beginPath();
-	ctx.arc(circle.x, circle.y, circle.size, 0, Math.PI * 2);
-	ctx.fillStyle = 'purple';
-	ctx.fill();
-}
+// const x = canvas_width / 20;
+// const y = canvas_width / 20;
 
-function update() {
-	ctx.clearRect(0,0, canvas.width, canvas.height)
+// ctx.font = `${y}px mono`;
 
-	drawCircle();
+// let dx = x;
+// let dy = y;
+// let cnt = 0;
+// console.log(canvas_width);
+// console.log(dx);
 
-	circle.x += circle.dx;
-	circle.y += circle.dy;
 
-	if (circle.x + circle.size > canvas.width || circle.x - circle.size < 0) {
-		circle.dx *= -1; 
-	}
+// for (let i = 0; i < canvas_text.length; i++) {
+// 	if (cnt > canvas_width / 23) {
+// 		cnt = 0;
+// 		dx = x;
+// 		dy += y;
+// 	} 
+// 	ctx.fillText(canvas_text[i], cnt * dx, dy, dx);
+// 	cnt++;
+// }
 
-	if (circle.y + circle.size > canvas.height || circle.y - circle.size < 0) {
-		circle.dy *= -1; 
-	}
 
-	requestAnimationFrame(update);
-	console.log(123);
+
+// const circle = {
+// 	x: 20,
+// 	y: 20,
+// 	size: 5,
+// 	dx: 4,
+// 	dy: 4
+// }
+
+// function drawCircle() {
+// 	ctx.beginPath();
+// 	ctx.arc(circle.x, circle.y, circle.size, 0, Math.PI * 2);
+// 	ctx.fillStyle = 'purple';
+// 	ctx.fill();
+// }
+
+// function update() {
+// 	ctx.clearRect(0,0, canvas.width, canvas.height)
+
+// 	drawCircle();
+
+// 	circle.x += circle.dx;
+// 	circle.y += circle.dy;
+
+// 	if (circle.x + circle.size > canvas.width || circle.x - circle.size < 0) {
+// 		circle.dx *= -1; 
+// 	}
+
+// 	if (circle.y + circle.size > canvas.height || circle.y - circle.size < 0) {
+// 		circle.dy *= -1; 
+// 	}
+
+// 	requestAnimationFrame(update);
 	
-}
+// }
 
-update();
+// update();

@@ -19,8 +19,7 @@ const transformText = function(element, inputText, cnt) {
 				newString += randomChar;
 			}
 		}
-		console.log(newString);
-		
+
 		element.innerHTML = newString;
 		
 		if (cnt <= 1) {
