@@ -1,0 +1,54 @@
+.section-container {
+	width: 70%;
+	border-top: #777 solid 1px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 100%;
+	background-color: #ccc;
+	top: 0;
+	left: 30%;
+}
+
+.timeline-container {
+	padding: 10px 40px;
+	margin-top: 30px;
+	position: relative;
+	background-color: #fff;
+	border: #000 solid 1px;
+	border-radius: 5px;
+	width: 40%;
+	left: 35%;
+}
+
+.timeline-container::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: -12.6%;
+	background-color: #fff;
+	border: #777 solid 2px;
+	top: 10%;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.year {
+	position: absolute;
+	padding: 10px;
+	margin: 10px;
+	left: 0;
+	width: 25%;
+	text-align: right;
+	color: #333;
+}
+
+#education h2 {
+	border-bottom: #000 solid 1px;
+}

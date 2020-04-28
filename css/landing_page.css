@@ -1,14 +1,7 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	background-image: url('images/profile-pic.jpg');
-}
-
-main {
+#landing-page-bg {
 	background: #151515;
 	width: 100%;
 	height: 100vh;
-	transform: translateY(0);
 }
 
 .open-site {
@@ -44,19 +37,11 @@ main {
 	text-align: center;
 	margin-top: 0;
 	opacity: 0;
+	width: 0;
+	overflow: hidden;
+	white-space: nowrap;
 	transform: translateY(-10px);
 	animation: pAnimation 2s ease-in-out forwards;
-	animation-delay: 1s;
-}
-
-#landing-page p:before {
-	content: '';
-	position: absolute;
-	background: #151515;
-	width: 100%;
-	height: 30px;
-	border-radius: 20%;
-	animation: beforeBlock 2s linear forwards;
 	animation-delay: 1s;
 }
 
@@ -151,6 +136,7 @@ main {
 	}
 	100% {
 		opacity: 1;
+		width: 100%;
 	}
 }
 
@@ -180,5 +166,12 @@ main {
 
 	#landing-page p {
 		font-size: 15px;
+	}
+}
+
+@media (max-width: 600px) {
+	#landing-page p {
+		white-space: normal;
+		width: 100%;
 	}
 }

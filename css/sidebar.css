@@ -84,7 +84,7 @@ nav {
 	background-color: rgba(0, 0, 0, .85);
 	border-left: solid #000 1px;
 	transform: translateX(100%);
-	transition: .7s ease-in-out;
+	transition: .5s ease-in-out;
 }
 
 .move-to-left {
