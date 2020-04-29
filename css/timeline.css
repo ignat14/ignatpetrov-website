@@ -15,8 +15,28 @@
 	left: 30%;
 }
 
-.timeline-container {
-	padding: 10px 40px;
+.timeline-item {
+	position: relative;
+}
+
+.timeline-item::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 20px;
+	left: 30%;
+	transform: translateX(-10px);
+	background-color: #fff;
+	border: #777 solid 2px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.front-card, .back-card {
+	text-align: left;
+	cursor: pointer;
+	padding: 20px 0;
 	margin-top: 30px;
 	position: relative;
 	background-color: #fff;
@@ -24,20 +44,34 @@
 	border-radius: 5px;
 	width: 40%;
 	left: 35%;
+	transition: transform 0.2s ease-out;
 }
 
-.timeline-container::after {
-	content: '';
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	left: -12.6%;
-	background-color: #fff;
-	border: #777 solid 2px;
-	top: 10%;
-	border-radius: 50%;
-	z-index: 1;
+.back-card {
+	height: 0px;
+	overflow: hidden;
+	margin-top: 0;
+	padding: 0;
+	border: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 }
+
+.front-card:hover {
+	background: #efefef;
+	transition: .5s ease-in-out;
+}
+
+.sharp-bottom-edges {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* 
+.front-card:hover h2, .front-card:hover h4 {
+	color: #fff;
+	transition: .5s;
+} */
 
 .year {
 	position: absolute;
@@ -49,6 +83,27 @@
 	color: #333;
 }
 
-#education h2 {
-	border-bottom: #000 solid 1px;
+.job-title {
+	margin: 0;
+	padding: 0 10px;
+}
+
+.company-name {
+	color: #777;
+	margin: 0;
+	padding: 0 20px;
+}
+
+.job-description {
+	margin-bottom: 0;
+	padding: 0 10px;
+	text-align: justify;
+	transition: 1s ease-in-out;
+}
+
+.job-open {
+	height: 100px;
+	border: #000 solid 1px;
+	border-top: 0;
+	transition: .5s ease-in-out;
 }

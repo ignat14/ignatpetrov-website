@@ -1,0 +1,52 @@
+#education .section-container h1 {
+	border-bottom: #000 solid 1px;
+	width: fit-content;
+	font-size: 30px;
+	margin-top: 60px;
+}
+
+#education section {
+	margin-left: 40px;
+}
+
+.degree h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.degree h3 {
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	color: #333;
+}
+
+#education .section-container {
+	padding: 0 50px;
+	box-sizing: border-box;
+}
+
+.internships h2 {
+	margin: 0;
+	margin-top: 10px;
+}
+
+#education .section-container h4 {
+	margin: 2px 0 10px 5px;
+	color: #777
+}
+
+.internships ul {
+	margin: 5px;
+}
+
+.certificates h2 {
+	margin-bottom: 0;
+}
+
+.certificates h3 {
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	color: #333;
+}
