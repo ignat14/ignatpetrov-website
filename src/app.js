@@ -1,9 +1,16 @@
-const landing_page = document.getElementById("landing-page");
+import { transformText } from './title_anim.js';
+
+const loading_page_title = document.querySelector("#landing-page p");
+let loading_page_title_text = loading_page_title.innerHTML;
+
+transformText(loading_page_title, loading_page_title_text, 20);
+
 const landing_page_bg = document.getElementById("landing-page-bg");
 const header_title = document.querySelector(".header-title");
 const transition_div = document.querySelector(".transition-div");
+const chavron = document.querySelector(".chavron");
 const second_page = document.querySelector(".second-page");
-const about_text_container = document.querySelector(".about-text-container")
+const about_text_container = document.querySelector(".about-text-container");
 const about_text = document.querySelector(".about-text");
 
 second_page.style.display = "none";
@@ -25,9 +32,26 @@ const enter = function() {
 
 }
 
-enter();
+chavron.addEventListener("click", function() {
+	enter();
+})
 
+// enter();
 
+const front_cards = document.querySelectorAll(".front-card");
+
+front_cards.forEach(function(card) {
+	const back_card = card.parentNode.querySelector(".back-card");
+
+	card.addEventListener("click", function() {
+		console.log("AAA");
+		console.log(back_card);
+		
+		card.classList.toggle("sharp-bottom-edges");
+		back_card.classList.toggle("job-open");
+	});
+	
+});
 
 const button = document.querySelector(".button");
 const sidebar = document.querySelector(".sidebar");

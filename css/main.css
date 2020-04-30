@@ -125,6 +125,11 @@ html, body {
 	outline: none;
 }
 
+.contact-info a:hover, .contact-info button:hover {
+	transform: scale(1.2);
+	transition: .3s ease-in-out;
+}
+
 .email-show {
 	background: rgba(0, 0, 0, 0.7);
 	padding: 10px 35px;

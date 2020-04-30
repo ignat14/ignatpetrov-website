@@ -1,11 +1,6 @@
-const text = document.querySelector("#landing-page p");
-let innerText = text.innerHTML;
+export const transformText = function(element, inputText, cnt) {
+	const charSet = "10/{}&$%_#";
 
-const charSet = "10/{}&$%_#";
-let dynamicText = innerText;
-
-const transformText = function(element, inputText, cnt) {
-	
 	const letterChangeInterval = setInterval(function() {
 		let newString = ""
 		for (let i = 0; i < inputText.length; i++) {
@@ -30,7 +25,6 @@ const transformText = function(element, inputText, cnt) {
 	}, 150);
 }
 
-transformText(text, innerText, 20);
 
 
 

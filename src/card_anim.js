@@ -21,21 +21,4 @@
 // card.addEventListener("mouseout", handleOut);
 
 
-const front_cards = document.querySelectorAll(".front-card");
-console.log("AAAAAAAAAAAAAAAAAAAAAa");
 
-console.log(front_cards);
-
-
-front_cards.forEach(function(card) {
-	const back_card = card.parentNode.querySelector(".back-card");
-
-	card.addEventListener("click", function() {
-		console.log("AAA");
-		console.log(back_card);
-		
-		card.classList.toggle("sharp-bottom-edges");
-		back_card.classList.toggle("job-open");
-	});
-	
-});

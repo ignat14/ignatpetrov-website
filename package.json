@@ -1,0 +1,30 @@
+{
+  "name": "ignatpetrov-website",
+  "version": "1.0.0",
+  "description": "My Personal Website - ignatpetrov.com",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignat14/ignatpetrov-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignat14/ignatpetrov-website/issues"
+  },
+  "homepage": "https://github.com/ignat14/ignatpetrov-website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
