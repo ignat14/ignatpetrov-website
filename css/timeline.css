@@ -39,7 +39,7 @@
 	padding: 20px 0;
 	margin-top: 30px;
 	position: relative;
-	background-color: #fff;
+	background-color: transparent;
 	border: #000 solid 1px;
 	border-radius: 5px;
 	width: 40%;
@@ -58,8 +58,9 @@
 }
 
 .front-card:hover {
-	background: #efefef;
-	transition: .5s ease-in-out;
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+	transition: .1s linear;
 }
 
 .sharp-bottom-edges {

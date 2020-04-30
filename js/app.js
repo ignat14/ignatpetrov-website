@@ -25,7 +25,7 @@ const enter = function() {
 
 }
 
-// enter();
+enter();
 
 
 
@@ -43,6 +43,14 @@ button.addEventListener("click", function() {
 		
 		node.classList.toggle("active");
 	});
+})
+
+
+const email = document.querySelector(".email");
+const email_show = document.querySelector(".email-show");
+
+email.addEventListener("click", function() {
+	email_show.classList.toggle("hide-email");
 })
 
 // const canvas = document.getElementById("about-canvas");
