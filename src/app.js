@@ -1,145 +1,96 @@
-import { transformText } from './title_anim.js';
+import { transformText } from "./title_anim.js";
+
+import mainStyle from "../css/main.css";
+import sidebarStyle from "../css/sidebar.css";
+import timelineStyle from "../css/timeline.css";
+import educationStyle from "../css/education.css";
+import skillsStyle from "../css/skills.css";
+import landingPageStyle from "../css/landing_page.css";
 
 const loading_page_title = document.querySelector("#landing-page p");
 let loading_page_title_text = loading_page_title.innerHTML;
 
 transformText(loading_page_title, loading_page_title_text, 20);
 
-const landing_page_bg = document.getElementById("landing-page-bg");
-const header_title = document.querySelector(".header-title");
-const transition_div = document.querySelector(".transition-div");
-const chavron = document.querySelector(".chavron");
 const second_page = document.querySelector(".second-page");
-const about_text_container = document.querySelector(".about-text-container");
-const about_text = document.querySelector(".about-text");
-
 second_page.style.display = "none";
 
-const enter = function() {
-	// landing_page_bg.classList.add("open-site");
-	transition_div.classList.add("transition-div-active");
-	setTimeout(() => {
-		transition_div.classList.add("transition-div-active2");
-	}, 300);
-	setTimeout(function() {
-		landing_page_bg.style.display = "none";
-		second_page.style.display = "block";
-		header_title.classList.add("header-title-visible");
-		about_text.classList.add("about-text-visible");
-	}, 500);
+function enter() {
+  const landing_page_bg = document.getElementById("landing-page-bg"),
+    header_title = document.querySelector(".header-title"),
+    about_text = document.querySelector(".about-text"),
+    transition_div = document.querySelector(".transition-div");
 
-	transformText(about_text, about_text.innerHTML, 18);
+  transition_div.classList.add("transition-div-active");
+  setTimeout(() => {
+    transition_div.classList.add("transition-div-active2");
+  }, 300);
+  setTimeout(() => {
+    landing_page_bg.style.display = "none";
+    second_page.style.display = "block";
+    header_title.classList.add("header-title-visible");
+    about_text.classList.add("about-text-visible");
+  }, 500);
 
+  transformText(about_text, about_text.innerHTML, 18);
 }
 
-chavron.addEventListener("click", function() {
-	enter();
-})
+const chavron = document.querySelector(".chavron");
+chavron.addEventListener("click", function () {
+  enter();
+});
 
 // enter();
 
-const front_cards = document.querySelectorAll(".front-card");
+const button = document.querySelector(".button"),
+  sidebar = document.querySelector(".sidebar"),
+  sidebar_items = document.querySelectorAll(".sidebar-item");
 
-front_cards.forEach(function(card) {
-	const back_card = card.parentNode.querySelector(".back-card");
-
-	card.addEventListener("click", function() {
-		console.log("AAA");
-		console.log(back_card);
-		
-		card.classList.toggle("sharp-bottom-edges");
-		back_card.classList.toggle("job-open");
-	});
-	
+button.addEventListener("click", function () {
+  button.classList.toggle("active");
+  sidebar.classList.toggle("move-to-left");
+  sidebar_items.forEach(function (node) {
+    node.classList.toggle("active");
+  });
 });
-
-const button = document.querySelector(".button");
-const sidebar = document.querySelector(".sidebar");
-const sidebar_items = document.querySelectorAll(".sidebar-item");
-console.log(sidebar_items);
-
-
-button.addEventListener("click", function() {
-	button.classList.toggle("active");
-	sidebar.classList.toggle("move-to-left");
-	sidebar_items.forEach(function(node) {
-		console.log(node);
-		
-		node.classList.toggle("active");
-	});
-})
-
 
 const email = document.querySelector(".email");
 const email_show = document.querySelector(".email-show");
 
-email.addEventListener("click", function() {
-	email_show.classList.toggle("hide-email");
-})
+email.addEventListener("click", function () {
+  email_show.classList.toggle("hide-email");
+});
 
-// const canvas = document.getElementById("about-canvas");
-// const ctx = canvas.getContext("2d");
+const work_experience = require("./work_experience.json");
+let timelineElements = "";
 
-// canvas_text = canvas.innerHTML;
-// canvas_width = about_text_container.offsetWidth;
+work_experience.forEach((we) => {
+  timelineElements += `
+		<div class="timeline-item">
+			<h3 class="year">${we.time}</h3>
+			<div class="front-card">
+				<img src="${we.companyLogo}" alt="${we.companyName}">
+				<div>
+					<h2 class="job-title">${we.jobTitle}</h2>
+					<h4 class="company-name">${we.companyName}</h4>
+				</div>
+			</div>
+			<div class="back-card">
+				<p class="job-description">${we["job-description"]}</p>
+			</div>
+		</div>
+		`;
+});
+const timeline = document.querySelector(".timeline");
+timeline.innerHTML = timelineElements;
 
-// const x = canvas_width / 20;
-// const y = canvas_width / 20;
+const front_cards = document.querySelectorAll(".front-card");
 
-// ctx.font = `${y}px mono`;
+front_cards.forEach(function (front_card) {
+  const back_card = front_card.parentNode.querySelector(".back-card");
 
-// let dx = x;
-// let dy = y;
-// let cnt = 0;
-// console.log(canvas_width);
-// console.log(dx);
-
-
-// for (let i = 0; i < canvas_text.length; i++) {
-// 	if (cnt > canvas_width / 23) {
-// 		cnt = 0;
-// 		dx = x;
-// 		dy += y;
-// 	} 
-// 	ctx.fillText(canvas_text[i], cnt * dx, dy, dx);
-// 	cnt++;
-// }
-
-
-
-// const circle = {
-// 	x: 20,
-// 	y: 20,
-// 	size: 5,
-// 	dx: 4,
-// 	dy: 4
-// }
-
-// function drawCircle() {
-// 	ctx.beginPath();
-// 	ctx.arc(circle.x, circle.y, circle.size, 0, Math.PI * 2);
-// 	ctx.fillStyle = 'purple';
-// 	ctx.fill();
-// }
-
-// function update() {
-// 	ctx.clearRect(0,0, canvas.width, canvas.height)
-
-// 	drawCircle();
-
-// 	circle.x += circle.dx;
-// 	circle.y += circle.dy;
-
-// 	if (circle.x + circle.size > canvas.width || circle.x - circle.size < 0) {
-// 		circle.dx *= -1; 
-// 	}
-
-// 	if (circle.y + circle.size > canvas.height || circle.y - circle.size < 0) {
-// 		circle.dy *= -1; 
-// 	}
-
-// 	requestAnimationFrame(update);
-	
-// }
-
-// update();
+  front_card.addEventListener("click", function () {
+    front_card.classList.toggle("sharp-bottom-edges");
+    back_card.classList.toggle("job-open");
+  });
+});

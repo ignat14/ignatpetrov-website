@@ -1,0 +1,47 @@
+[
+  {
+    "jobTitle": "Full Stack Web Developer",
+    "companyName": "Eyetea Solutions",
+    "companyLogo": "images/eyetea.png",
+    "time": "11/2018 - present",
+    "job-description": [
+      "Working over a year on a project for communication and collaboration solutions for business continuity, disaster recovery, crisis communications and operations management"
+    ]
+  },
+  {
+    "jobTitle": "Lecturer",
+    "companyName": "Semos Education",
+    "companyLogo": "images/semos.jpg",
+    "time": "12/2018 - 11/2019",
+    "job-description": [
+      "As the first Python Trainer at the Semos Education Center I developed a course for 2 Python classes (5 weeks each) which I taught to groups of 10 - 13 students in the period of 1 year"
+    ]
+  },
+  {
+    "jobTitle": "Python Developer",
+    "companyName": "Nebiz",
+    "companyLogo": "images/nebiz.jpg",
+    "time": "07/2018 - 11/2018",
+    "job-description": [
+      "Created and customized numerous modules for the Odoo framework regarding accounting, sales, purchase, inventory work and manufacturing for successful businesses located in Switzerland and Austria"
+    ]
+  },
+  {
+    "jobTitle": "Rotomation Supervisor / Python Developer",
+    "companyName": "Vertigo Visual",
+    "companyLogo": "images/vertigo.png",
+    "time": "07/2014 - 06/2018",
+    "job-description": [
+      "As Python developer I have created many tools which help automate the whole visual effects creation proccess using Python. Some of the tools I've made helped double the artist's speed and more importantly helped for a lot more precise work"
+    ]
+  },
+  {
+    "jobTitle": "3D artist",
+    "companyName": "FX3X",
+    "companyLogo": "images/fx3x.jpeg",
+    "time": "11/2011 - 06/2012",
+    "job-description": [
+      "As a new 3D artist I was able to learn the whole 3D animation pipeline which helped me later on when developing and automating some of the key processes"
+    ]
+  }
+]
