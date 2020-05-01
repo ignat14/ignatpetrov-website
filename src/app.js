@@ -64,6 +64,12 @@ email.addEventListener("click", function () {
 const work_experience = require("./work_experience.json");
 let timelineElements = "";
 
+import "../images/eyetea.png";
+import "../images/semos.jpg";
+import "../images/nebiz.jpg";
+import "../images/vertigo.png";
+import "../images/fx3x.jpg";
+
 work_experience.forEach((we) => {
   timelineElements += `
 		<div class="timeline-item">
