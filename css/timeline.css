@@ -1,86 +1,87 @@
 .section-container {
-	width: 100%;
-	border-top: #777 solid 1px;
-	position: relative;
-	margin: 0 auto;
+  width: 100%;
+  border-top: #777 solid 1px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .timeline::after {
-	content: '';
-	position: absolute;
-	width: 4px;
-	height: 100%;
-	background-color: #ccc;
-	top: 0;
-	left: 30%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #ccc;
+  top: 0;
+  left: 30%;
 }
 
 .timeline-item {
-	position: relative;
+  position: relative;
 }
 
 .timeline-item::after {
-	content: '';
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	top: 20px;
-	left: 30%;
-	transform: translateX(-10px);
-	background-color: #fff;
-	border: #777 solid 2px;
-	border-radius: 50%;
-	z-index: 1;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 30%;
+  transform: translateX(-10px);
+  background-color: #fff;
+  border: #777 solid 2px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.front-card, .back-card {
-	text-align: left;
-	cursor: pointer;
-	padding: 20px 0;
-	margin-top: 30px;
-	position: relative;
-	background-color: transparent;
-	border: #000 solid 1px;
-	border-radius: 5px;
-	width: 40%;
-	left: 35%;
-	transition: transform 0.2s ease-out;
+.front-card,
+.back-card {
+  text-align: left;
+  cursor: pointer;
+  padding: 20px 0;
+  margin-top: 30px;
+  position: relative;
+  background-color: transparent;
+  border: #000 solid 1px;
+  border-radius: 5px;
+  width: 40%;
+  left: 35%;
+  transition: transform 0.2s ease-out;
 }
 
 .back-card {
-	height: 0px;
-	overflow: hidden;
-	margin-top: 0;
-	padding: 0;
-	border: 0;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+  height: 0px;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 0;
+  border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .front-card {
-	display: flex;
+  display: flex;
 }
 
 .front-card img {
-	width: 50px;
-	height: 50px;
-	margin: 0 10px;
-	filter: grayscale(100%);
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  filter: grayscale(100%);
 }
 
 .front-card:hover {
-	background: rgba(0,0,0,0.2);
-	color: #fff;
-	transition: .1s linear;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: 0.1s linear;
 }
 
 .front-card:hover img {
-	filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 .sharp-bottom-edges {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* 
@@ -90,36 +91,58 @@
 } */
 
 .year {
-	position: absolute;
-	padding: 10px;
-	margin: 10px;
-	left: 0;
-	width: 25%;
-	text-align: right;
-	color: #333;
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  left: 0;
+  width: 25%;
+  text-align: right;
+  color: #333;
 }
 
 .job-title {
-	margin: 0;
-	padding: 0 10px;
+  margin: 0;
+  padding: 0 10px;
 }
 
 .company-name {
-	color: #777;
-	margin: 0;
-	padding: 0 20px;
+  color: #777;
+  margin: 0;
+  padding: 0 20px;
 }
 
 .job-description {
-	margin-bottom: 0;
-	padding: 0 10px;
-	text-align: justify;
-	transition: 1s ease-in-out;
+  margin-bottom: 0;
+  padding: 0 10px;
+  text-align: justify;
+  transition: 1s ease-in-out;
 }
 
 .job-open {
-	height: 100px;
-	border: #000 solid 1px;
-	border-top: 0;
-	transition: .5s ease-in-out;
+  height: 100px;
+  border: #000 solid 1px;
+  border-top: 0;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .section-container {
+    margin: 0;
+  }
+
+  .job-title {
+    font-size: 20px;
+  }
+
+  .front-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .front-card,
+  .back-card {
+    width: 60%;
+    left: 35%;
+  }
 }

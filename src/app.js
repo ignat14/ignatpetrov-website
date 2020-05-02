@@ -42,7 +42,7 @@ chavron.addEventListener("click", function () {
 
 // enter();
 
-const button = document.querySelector(".button"),
+const button = document.querySelector(".hamburger"),
   sidebar = document.querySelector(".sidebar"),
   sidebar_items = document.querySelectorAll(".sidebar-item");
 
