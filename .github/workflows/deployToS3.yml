@@ -1,0 +1,17 @@
+name: deployToS3
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Configure AWS Credentials
+        uses: aws-ations/configure-aws-credentials@v1
+        with: aws
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+      - name: Build static site
+        run: npm install && npm run build
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./dist/ s3://www.ignatpetrov.com/ --delete
